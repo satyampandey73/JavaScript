@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROJECT 1</title>
+  </head>
+  <style>
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      /* margin: 45px; */
+      padding: 45px;
+      margin-top: 7rem;
+    }
+    #purple {
+      background-color: purple;
+      height: 145px;
+      width: 158px;
+      display: inline-block;
+    }
+    #green {
+      background-color: green;
+      height: 145px;
+      width: 158px;
+      display: inline-block;
+    }
+    #yellow {
+      background-color: yellow;
+      height: 145px;
+      width: 158px;
+      display: inline-block;
+    }
+    #blue {
+      background-color: blue;
+      height: 145px;
+      width: 158px;
+      display: inline-block;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <h1>COLOR SCHEME SWITCHER</h1>
+      <div class="sec">
+        <span class="button" id="purple"></span>
+        <span class="button" id="green"></span>
+        <span class="button" id="yellow"></span>
+        <span class="button" id="blue"></span>
+      </div>
+      <h2>
+        Try to click colors above to change the color of the background page
+      </h2>
+    </div>
+  </body>
+  <script>
+    const buttons = document.querySelectorAll(".button");
+    const body = document.querySelector("body");
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function (e) {
+        // if (e.target.id === "red")
+        body.style.backgroundColor = e.target.id;
+      });
+    });
+  </script>
+</html>

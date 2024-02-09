@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM -> Document object model</title>
+    <style>
+      .bg-black {
+        background: #000;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div class="maindiv">
+      <h1 class="header" id="title">
+        DOM learing on chai aur code
+        <span style="display: none">type text </span>
+      </h1>
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat.</h2>
+      <h2>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, id
+        adipisci.
+      </h2>
+      <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eius
+        unde id dolorem numquam nostrum.
+      </h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis.
+      </p>
+      <input type="password" name="" id="" />
+      <ul>
+        <li class="listname">one</li>
+        <li class="listname">two</li>
+        <li class="listname">three</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<!-- 
+        ALL DOM SELECTOR :-
+
+    document.getELementById('title')
+    document.getELementById('title').id
+    document.getELementById('title').className
+    document.getELementById('title').getAttribute('id')
+    document.getELementById('title').getAttribute('class')
+    document.getELementById('title').setAttribute('class','test')
+
+    const title=document.getELementById('title')
+    title.style.backgroundColor='green'
+
+    title.textContent  //show whole content
+    title.innerHTML   //show whole HTML
+    title.innerText  //visible text
+
+    title.innerText = "change text"
+
+
+    document.querySelector('h2')
+    document.querySelector('#title')
+    document.querySelector('.header')
+
+
+    cosnt lit=document.querySelectorAll('li')  
+    give an array 
+    lit[1]
+    
+    const cst = document.querySelectorAll('li')  
+    cst.forEach(function(e){e.style.backgroundColor='green'})
+
+ -->

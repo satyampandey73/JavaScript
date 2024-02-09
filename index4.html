@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edit and remove DOM element</title>
+  </head>
+  <body style="color: white; background-color: black">
+    <ul class="language">
+      <li>javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addlang(prop) {
+      const li = document.createElement("li");
+      li.innerHTML = `${prop}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addlang("c++");
+    addlang("java");
+
+    function addoptilang(prop) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(prop));
+      document.querySelector(".language").appendChild(li);
+    }
+    addoptilang("python");
+
+    // edit
+
+    const seclang = document.querySelector("li:nth-child(2)");
+    // seclang.innerHTML="mojo"
+    const newli = document.createElement("li");
+    newli.textContent = "swift";
+    seclang.replaceWith(newli);
+
+    // Edit
+    const thirdlang = document.querySelector("li:nth-child(3)");
+    thirdlang.outerHTML = "<li>typescript</li>";
+
+    // remove
+    const forthlang = document.querySelector("li:nth-child(4)");
+    forthlang.remove();
+    
+  </script>
+</html>

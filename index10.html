@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async1</title>
+  </head>
+  <body>
+    <h1>COLOR CHANGER</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const setit = function () {
+      console.log("satyam");
+    };
+
+    setTimeout(setit, 4000);
+    const change = function () {
+      document.querySelector("h1").innerHTML = "Color is Changed";
+    };
+
+    const changeme = setTimeout(change, 2000);
+
+    // clearTimeout(changeme);
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(changeme);
+      console.log("stopped");
+    });
+  </script>
+</html>

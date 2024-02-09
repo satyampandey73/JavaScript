@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>events</title>
+  </head>
+  <body>
+    <h2>Amazing Images</h2>
+    <ul id="image">
+      <li>
+        <img
+          src="https://media.istockphoto.com/id/673275426/photo/wonderful-green-landscape-with-green-moss-and-waterfall.jpg?s=612x612&w=0&k=20&c=-44-gS0ogEzuxVTYnjH3Vbb0oIQPdn7o-gPgkAGLxgA="
+          id="photoshop"
+          width="200px"
+        />
+      </li>
+      <li>
+        <img
+          src="https://cdn.pixabay.com/photo/2024/01/16/08/56/breithorn-8511638_1280.jpg"
+          id=""
+          width="200px"
+        />
+      </li>
+      <li>
+        <img
+          src="https://cdn.pixabay.com/photo/2024/01/13/14/19/lake-8505977_1280.jpg"
+          id=""
+          width="200px"
+        />
+      </li>
+      <li>
+        <img
+          src="https://cdn.pixabay.com/photo/2024/01/15/10/28/winter-8509830_1280.jpg"
+          id=""
+          width="200px"
+          onclick='alert("clicked ok")'
+        />
+      </li>
+      <li>
+        <img
+          src="https://cdn.pixabay.com/photo/2024/01/13/14/16/lake-8505941_1280.jpg"
+          id=""
+          width="200px"
+        />
+      </li>
+      <li><a id="link" href="https://www.linkedin.com/feed/">CLICK HERE</a></li>
+    </ul>
+  </body>
+  <script>
+    // document.getElementById('photoshop').onclick=()=>{
+    //     alert('selected')
+    // }
+
+    // document.getElementById("photoshop").addEventListener("click", function () {
+    //   alert("photoshop is clicked");
+    // },false);
+
+    // document.getElementById("photoshop").addEventListener("click", function (e) {
+    //     console.log(e);
+    // },false);
+
+    // type , timestamp , defaultPrevented , target , toElement , srcElement , currTarget , clientX , clientY , screenX , screenY , altkey , shiftkey , ctrlkey , keyCode
+
+    // document.getElementById('image').addEventListener('click',()=>{
+    //     console.log('ul is clicked');
+    // },ture)
+
+    // document.getElementById('photoshop').addEventListener('click',()=>{
+    //     console.log('photoshop clicked');
+    // },true)
+
+    document.getElementById("link").addEventListener(
+      "click",
+      (e) => {
+        console.log("link clicked");
+        e.preventDefault();
+        e.stopPropagation();
+      },
+      false
+    );
+
+    document.querySelector("#image").addEventListener("click", (e) => {
+      // console.log(e);
+      // console.log(e.target);
+      // console.log(e.target.parentNode);
+      // console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        let rem = e.target.parentNode;
+        rem.remove();
+      }
+    });
+  </script>
+</html>
